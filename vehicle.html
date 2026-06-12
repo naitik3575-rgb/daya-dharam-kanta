@@ -1,28 +1,57 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
 <title>Vehicle Rates</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body style="font-family:Arial;text-align:center;padding:20px;">
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#f8f9fa,#dbeafe);
+padding:20px;
+text-align:center;
+}
 
-<h1>Choose Your Vehicle</h1>
+.container{
+background:white;
+max-width:500px;
+margin:auto;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
 
-<select onchange="showRate(this.value)">
-<option value="">Select Vehicle</option>
-<option value="Tata Ace - ₹100">Tata Ace</option>
-<option value="Three Wheeler - ₹70">Three Wheeler</option>
-<option value="Canter - ₹120">Canter</option>
-<option value="Turbo - ₹300">Turbo</option>
-</select>
+h1{
+color:#b30000;
+}
 
-<h2 id="rate"></h2>
+select{
+width:90%;
+padding:12px;
+font-size:18px;
+border-radius:10px;
+margin-top:15px;
+}
 
-<script>
+#rate{
+margin-top:25px;
+padding:15px;
+font-size:22px;
+font-weight:bold;
+background:#fff3cd;
+border-radius:10px;
+color:#b30000;
+}
+</style></head><body><div class="container"><h1>Choose Your Vehicle</h1><select onchange="showRate(this.value)">
+<option value="">Select Vehicle</option><option value="Tata Ace - ₹140">Tata Ace</option>
+<option value="Canter - ₹200">Canter</option>
+<option value="Tata 407/409 - ₹200">Tata 407/409</option>
+<option value="Turbo 10 Tyre - ₹350">Turbo 10 Tyre</option>
+<option value="Turbo 12 Tyre - ₹400">Turbo 12 Tyre</option>
+<option value="Three Wheeler - ₹100">Three Wheeler</option>
+<option value="Jeep - ₹100">Jeep</option>
+<option value="Other - According to weight and size of vehicle">Other</option></select><div id="rate">
+Select a vehicle to see the rate
+</div></div><script>
 function showRate(rate){
 document.getElementById("rate").innerHTML = rate;
 }
-</script>
-
-</body>
+</script></body>
 </html>
