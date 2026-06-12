@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vehicle Rates</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="font-family:Arial;text-align:center;padding:20px;">
+
+<h1>Choose Your Vehicle</h1>
+
+<select onchange="showRate(this.value)">
+<option value="">Select Vehicle</option>
+<option value="Tata Ace - ₹100">Tata Ace</option>
+<option value="Three Wheeler - ₹70">Three Wheeler</option>
+<option value="Canter - ₹120">Canter</option>
+<option value="Turbo - ₹300">Turbo</option>
+</select>
+
+<h2 id="rate"></h2>
+
+<script>
+function showRate(rate){
+document.getElementById("rate").innerHTML = rate;
+}
+</script>
+
+</body>
+</html>
