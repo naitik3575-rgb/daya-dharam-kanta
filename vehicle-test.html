@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vehicle Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#f8f9fa,#dbeafe);
+padding:20px;
+text-align:center;
+}
+
+.container{
+background:white;
+max-width:500px;
+margin:auto;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+
+input,select{
+width:90%;
+padding:12px;
+margin:10px;
+font-size:18px;
+border-radius:10px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+background:#b30000;
+color:white;
+border:none;
+border-radius:10px;
+}
+
+#vehicleSection{
+display:none;
+margin-top:20px;
+}
+
+#rate{
+margin-top:20px;
+padding:15px;
+font-size:22px;
+font-weight:bold;
+background:#fff3cd;
+border-radius:10px;
+color:#b30000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Enter Your Details</h1>
+
+<input type="text" id="name" placeholder="Name">
+
+<input type="text" id="surname" placeholder="Surname (Optional)">
+
+<input type="text" id="vehicleNo" placeholder="Vehicle Number (Optional)">
+
+<br>
+
+<button onclick="startProcess()">Confirm</button>
+
+<h2 id="welcome"></h2>
+
+<div id="vehicleSection">
+
+<h2>Choose Your Vehicle</h2>
+
+<select onchange="showRate(this.value)">
+<option value="">Select Vehicle</option>
+
+<option value="Tata Ace - ₹140">Tata Ace</option>
+<option value="Canter - ₹200">Canter</option>
+<option value="Tata 407/409 - ₹200">Tata 407/409</option>
+<option value="Turbo 10 Tyre - ₹350">Turbo 10 Tyre</option>
+<option value="Turbo 12 Tyre - ₹400">Turbo 12 Tyre</option>
+<option value="Three Wheeler - ₹100">Three Wheeler</option>
+<option value="Jeep - ₹100">Jeep</option>
+<option value="Other - According to weight and size of vehicle">Other</option>
+
+</select>
+
+<div id="rate">
+Select a vehicle to see the rate
+</div>
+
+</div>
+
+</div>
+
+<script>
+function startProcess(){
+
+let name=document.getElementById("name").value;
+
+if(name==""){
+alert("Please Enter Your Name");
+return;
+}
+
+document.getElementById("welcome").innerHTML="Welcome "+name+" 👋";
+
+document.getElementById("vehicleSection").style.display="block";
+}
+
+function showRate(rate){
+document.getElementById("rate").innerHTML=rate;
+}
+</script>
+
+</body>
+</html>
